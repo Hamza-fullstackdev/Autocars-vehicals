@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autocars Vehical</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header class="py-4 shadow-md">
         <div class="mx-4 sm:mx-16 flex flex-row justify-between items-center py-4">
             <div>
-                <a href="#"><img src="./images/autonation-logo.avif" width="200" class="w-full h-auto" alt="autocars-logo"></a>
+                <a href="#"><img src="./images/autonation-logo.avif" width="200" class="w-full h-auto"
+                        alt="autocars-logo"></a>
             </div>
             <nav class="hidden md:block">
                 <ul class="flex items-center gap-8">
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars for Sale</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell or Trade</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car Finance</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About Us</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact Us</a></li>
-                  </ul>
-                  
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars
+                            for Sale</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell
+                            or Trade</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car
+                            Finance</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About
+                            Us</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact
+                            Us</a>
+                    </li>
+                </ul>
             </nav>
             <div>
                 <div class="flex items-center space-x-4 relative">
                     <button id="searchIcon" class="hover:text-gray-400 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 015.2 11.8l4.3 4.3-1.4 1.4-4.3-4.3A7 7 0 1111 4z"></path></svg>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="https://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 4a7 7 0 015.2 11.8l4.3 4.3-1.4 1.4-4.3-4.3A7 7 0 1111 4z"></path>
+                        </svg>
                     </button>
                     <button id="toggleSidebar" class="md:hidden hover:text-gray-400 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="https://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -37,51 +64,85 @@
     </header>
     <div id="searchBar" class="hidden p-4 absolute bg-white w-full">
         <input type="text" class="w-full p-2 bg-gray-200 rounded-md" placeholder="Search...">
-    </div> 
-    <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-white p-4 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg">
+    </div>
+    <div id="sidebar"
+        class="fixed top-0 right-0 w-64 h-full bg-white p-4 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg">
         <button id="closeSidebar" class="hover:text-gray-400 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="https://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
         </button>
         <div class="mt-8 space-y-4 items-center">
             <nav>
                 <ul class="flex flex-col gap-8">
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars for Sale</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell or Trade</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car Finance</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About Us</a></li>
-                    <li><a href="#" class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact Us</a></li>
-                  </ul>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars
+                            for Sale</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell
+                            or Trade</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car
+                            Finance</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About
+                            Us</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact
+                            Us</a>
+                    </li>
+                </ul>
             </nav>
         </div>
-
+    </div>
+    <div id="scrollTopBtn" class="bg-pink-500 w-fit rounded-full cursor-pointer fixed bottom-10 right-10 group hidden"
+        onclick="scrollToTop()">
+        <div class="p-5 flex gap-3 items-center">
+            <svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-up text-white text-2xl" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+            </svg>
+            <span
+                class="text-white font-bold overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap">Scroll
+                to top</span>
+        </div>
     </div>
 </body>
 <script>
-    document.getElementById('searchIcon').addEventListener('click', function() {
+    document.getElementById('searchIcon').addEventListener('click', function () {
         document.getElementById('searchBar').classList.toggle('hidden');
     });
 
-    document.getElementById('toggleSidebar').addEventListener('click', function() {
+    document.getElementById('toggleSidebar').addEventListener('click', function () {
         document.getElementById('sidebar').classList.toggle('translate-x-full');
     });
 
-    document.getElementById('closeSidebar').addEventListener('click', function() {
+    document.getElementById('closeSidebar').addEventListener('click', function () {
         document.getElementById('sidebar').classList.add('translate-x-full');
     });
     function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-window.addEventListener('scroll', function() {
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    if (window.scrollY > 100) {
-        scrollTopBtn.classList.remove('hidden');
-    } else {
-        scrollTopBtn.classList.add('hidden');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
-});
+    window.addEventListener('scroll', function () {
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        if (window.scrollY > 100) {
+            scrollTopBtn.classList.remove('hidden');
+        } else {
+            scrollTopBtn.classList.add('hidden');
+        }
+    });
 </script>
+
 </html>

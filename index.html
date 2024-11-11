@@ -12,7 +12,8 @@
     <header class="py-4 shadow-md">
         <div class="mx-4 sm:mx-16 flex flex-row justify-between items-center py-4">
             <div>
-                <h3 class="text-blue-950 font-bold text-lg">SYSFOC-CARS <span class="text-pink-500 font-bold">DEALER</span></h3>
+                <h3 class="text-blue-950 font-bold text-lg">SYSFOC-CARS <span
+                        class="text-pink-500 font-bold">DEALER</span></h3>
             </div>
             <nav class="hidden md:block">
                 <ul class="flex items-center gap-8">
@@ -115,67 +116,200 @@
                 to top</span>
         </div>
     </div>
-    <section
-        style="background: url('./images/hero-image.avif'); background-color: #00000053; background-blend-mode: multiply; background-repeat: no-repeat;">
-        <div class="mx-4 sm:mx-16 py-10 md:py-18">
-            <div>
-                <h1 class="font-bold text-5xl text-white text-center">AutoNation USA</h1>
-                <h2 class="mt-2 font-semibold text-2xl text-white text-center">What Drives You, Drives Us.</h2>
-                <p class="mt-3 font-semibold text-xl text-white text-center">Feel the Love with a Hassle-Free Buying
-                    Experience.</p>
+    <div id="custom-carousel" class="relative w-full">
+        <div class="relative h-[20rem] overflow-hidden md:h-[30rem]">
+            <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0"
+                data-carousel-item="0">
+                <img src="./images/sydney harbour bridge.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 brightness-50"
+                    alt="Slide 1" />
+                <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center text-white">
+                    <h2 class="text-xl font-semibold">"Sydney's Premier Chauffeur Service – Where Luxury
+                        Meets Excellence"</h2>
+                </div>
             </div>
-            <div class="mt-5 px-4 flex items-center justify-center">
-                <div class="w-full w-[60%] bg-white rounded-md p-8">
-                    <h3 class="text-center text-3xl text-blue-950 font-bold">Find Cars Near Me</h3>
-                    <div class="flex justify-center mt-5">
-                        <div class="w-full">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+            <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0"
+                data-carousel-item="1">
+                <img src="./images/sydney.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 brightness-50"
+                    alt="Slide 2" />
+                <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center text-white">
+                    <h2 class="text-xl font-semibold">"Experience Sydney in Unmatched Luxury! Book Your Ride"</h2>
+                </div>
+            </div>
+
+            <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0"
+                data-carousel-item="2">
+                <img src="./images/opera house.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 brightness-50"
+                    alt="Slide 3" />
+                <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center text-white">
+                    <h2 class="text-xl font-semibold">"Step into a world of luxury with Sydney’s elite limousine
+                        service. Perfect
+                        for airport transfers, corporate needs, and special occasions"</h2>
+                </div>
+            </div>
+        </div>
+        <button type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            onclick="prevSlide()">
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="https://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            onclick="nextSlide()">
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="https://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
+        <div class="w-full w-[60%] bg-white rounded-md p-8">
+            <h3 class="text-3xl text-blue-950 font-bold uppercase">Search Our Inventory</h3>
+            <div class="flex justify-center mt-5">
+                <div class="w-full bg-gray-200 p-4 rounded">
+                    <form>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                            <div class="flex flex-col">
+                                <label for="year" class="font-semibold">Year</label>
+                                <select name="year" id="year"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Year</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="make" class="font-semibold">Make</label>
+                                <select name="make" id="make"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Make</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="model" class="font-semibold">Model</label>
+                                <select name="model" id="model"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Model</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="price" class="font-semibold">Price</label>
                                 <div>
-                                  <select name="year" id="year1" class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
-                                    <option value="any" class="bg-gray-50 text-gray-700 hover:bg-pink-100">Any Year</option>
-                                    <option value="2000" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2000</option>
-                                    <option value="2001" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2001</option>
-                                  </select>
+                                    <div>
+                                        <input type="range" name="price" id="price" min="10000" max="100000"
+                                        value="10000"
+                                        class="w-full appearance-none h-2 bg-pink-500 rounded-lg cursor-pointer accent-blue-950 focus:outline-none"
+                                        oninput="updatePrice(this.value)">
+                                        <span id="selectedPrice"
+                                            class="text-sm font-semibold">$10,000</span>
+                                    </div>
                                 </div>
-                                <div>
-                                  <select name="make" id="make" class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
-                                    <option value="any" class="bg-gray-50 text-gray-700 hover:bg-pink-100">Any Make</option>
-                                    <option value="2000" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2000</option>
-                                    <option value="2001" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2001</option>
-                                  </select>
-                                </div>
-                                <div>
-                                  <select name="model" id="model" class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
-                                    <option value="any" class="bg-gray-50 text-gray-700 hover:bg-pink-100">Any Model</option>
-                                    <option value="2000" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2000</option>
-                                    <option value="2001" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2001</option>
-                                  </select>
-                                </div>
-                                <div>
-                                  <select name="body-style" id="body-style" class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
-                                    <option value="any" class="bg-gray-50 text-gray-700 hover:bg-pink-100">Any Body Style</option>
-                                    <option value="2000" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2000</option>
-                                    <option value="2001" class="bg-gray-50 text-gray-700 hover:bg-pink-100">2001</option>
-                                  </select>
-                                </div>
-                                <div class="mx-auto col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4">
-                                  <button name="filters" id="filters" class="w-full px-4 py-2 border border-gray-300 flex justify-between items-center gap-5 rounded-md text-gray-700 cursor-pointer">
-                                    All Filters
-                                    <svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                        <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/>
-                                      </svg>
-                                  </button>
-                                </div>
-                              </div>
-                              
-                            <div class="mt-5">
-                                <button
-                                    class="w-full px-4 py-3 text-white bg-blue-950 rounded-md hover:bg-pink-500 transition duration-200 ease-in-out cursor-pointer">
-                                    Search Cars Now
-                                </button>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="bodystyle" class="font-semibold">Body Style</label>
+                                <select name="bodystyle" id="bodystyle"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Body Style</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="keyword" class="font-semibold">Keyword</label>
+                                <input type="text" name="keyword" id="keyword" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out">
                             </div>
                         </div>
-                    </div>
+                        <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 hidden" id="advanced-search-container">
+                            <div class="flex flex-col">
+                                <label for="transmition" class="font-semibold">Transmition</label>
+                                <select name="transmition" id="transmition"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Transmition</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="odometer" class="font-semibold">Odometer</label>
+                                <div>
+                                    <div>
+                                        <input type="range" name="odometer" id="odometer" min="45000" max="100000"
+                                        value="45000"
+                                        class="w-full appearance-none h-2 bg-pink-500 rounded-lg cursor-pointer accent-blue-950 focus:outline-none"
+                                        oninput="updateOdometer(this.value)">
+                                        <span id="selectedOdometer"
+                                            class="text-sm font-semibold">$45,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="fueltype" class="font-semibold">Fuel Type</label>
+                                <select name="fueltype" id="fueltype"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Fuel Type</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="color" class="font-semibold">Color</label>
+                                <select name="color" id="color"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Color</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="doors" class="font-semibold">Doors</label>
+                                <select name="doors" id="doors"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Doors</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="body" class="font-semibold">Body</label>
+                                <select name="body" id="body"
+                                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition duration-200 ease-in-out cursor-pointer">
+                                    <option value="0">Select Body</option>
+                                    <option value="1">2001</option>
+                                    <option value="2">2002</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center">
+                            <span class="text-center underline text-pink-500 font-bold cursor-pointer" id="advance-search" onclick="toggleAdvancedSearch()">Advanced Search</span>
+                        </div>
+                        <div class="mt-5">
+                            <button type="submit"
+                                class="w-full px-4 py-3 text-white bg-blue-950 rounded-md hover:bg-pink-500 transition duration-200 ease-in-out cursor-pointer">
+                                Search Cars Now
+                            </button>
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
         </div>
@@ -185,10 +319,13 @@
             <div class="border-r border-white">
                 <div class="flex items-center gap-5">
                     <div>
-                        <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check-square text-white" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                            <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
-                          </svg>
+                        <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                            class="bi bi-check-square text-white" viewBox="0 0 16 16">
+                            <path
+                                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                            <path
+                                d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
                     </div>
                     <div>
                         <p class="text-center text-2xl font-semibold text-white">Pre-Qualify Now</p>
@@ -198,9 +335,11 @@
             <div class="border-r border-white">
                 <div class="flex items-center gap-5">
                     <div>
-                        <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-car-front-fill text-white" viewBox="0 0 16 16">
-                            <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
-                          </svg>
+                        <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                            class="bi bi-car-front-fill text-white" viewBox="0 0 16 16">
+                            <path
+                                d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                        </svg>
                     </div>
                     <div>
                         <p class="text-center text-2xl font-semibold text-white">Buy Your Car Online</p>
@@ -210,9 +349,11 @@
             <div>
                 <div class="flex items-center gap-5">
                     <div>
-                        <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-tag-fill text-white" viewBox="0 0 16 16">
-                            <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
-                          </svg>
+                        <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                            class="bi bi-tag-fill text-white" viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg>
                     </div>
                     <div>
                         <p class="text-center text-2xl font-semibold text-white">Pre-Qualify Now</p>
@@ -222,8 +363,27 @@
         </div>
     </section>
     <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
+            <div>
+                <h3 class="text-3xl text-blue-950 font-bold">Our Promise: Your Happiness</h3>
+                <div class="mt-5">
+                    <p>Say yes to no worries at AutoNation USA. We bring you a hassle-free used car dealer experience
+                        with reassuring benefits that will leave you confident and happy, including our one low upfront
+                        price. Browse our vast selection of pre-owned cars, trucks, and SUVs and enjoy a buying process
+                        that is quick and easy without stress. Can't you feel the love already?</p>
+                </div>
+                <div class="mt-8">
+                    <a href="#" class="bg-pink-500 text-white px-8 py-4 rounded-full">Learn More</a>
+                </div>
+            </div>
+            <div>
+                <img src="./images/about.webp" alt="About" class="w-full h-auto rounded-md">
+            </div>
+        </div>
+    </section>
+    <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
         <div>
-            <h2 class="text-center text-4xl font-bold text-blue-950">Shop by Price</h2>
+            <h2 class="text-3xl font-bold text-blue-950 uppercase">Shop by Price</h2>
         </div>
         <div class="flex items-center justify-center">
             <div class="w-full">
@@ -274,11 +434,11 @@
     </section>
     <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
         <div>
-            <h2 class="text-center text-4xl font-bold text-blue-950">Shop by Brand</h2>
+            <h2 class="text-3xl font-bold text-blue-950 uppercase">Shop by Brand</h2>
         </div>
         <div class="flex items-center justify-center">
             <div class="w-full">
-                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+                <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
                     <div>
                         <a href="#">
                             <img src="./images/logo-ford-lrg.avif" alt="ford">
@@ -305,22 +465,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
-            <div>
-                <h3 class="text-3xl text-blue-950 font-bold">Our Promise: Your Happiness</h3>
-                <div class="mt-5">
-                    <p>Say yes to no worries at AutoNation USA. We bring you a hassle-free used car dealer experience with reassuring benefits that will leave you confident and happy, including our one low upfront price. Browse our vast selection of pre-owned cars, trucks, and SUVs and enjoy a buying process that is quick and easy without stress. Can't you feel the love already?</p>
-                </div>
-                <div class="mt-8">
-                    <a href="#" class="bg-pink-500 text-white px-8 py-4 rounded-full">Learn More</a>
-                </div>
-            </div>
-            <div>
-                <img src="./images/about.webp" alt="About" class="w-full h-auto rounded-md">
             </div>
         </div>
     </section>
@@ -332,10 +476,18 @@
                 </div>
                 <div>
                     <ul class="flex gap-5">
-                        <li><a href="#" class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">About Us</a></li>
-                        <li><a href="#" class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">Contact Us</a></li>
-                        <li><a href="#" class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">FAQs</a></li>
-                        <li><a href="#" class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">Terms & Conditions</a></li>
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">FAQs</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">Terms
+                                & Conditions</a></li>
                     </ul>
                 </div>
             </div>
@@ -368,6 +520,62 @@
             scrollTopBtn.classList.add('hidden');
         }
     });
+
+    function updatePrice(value) {
+        document.getElementById('selectedPrice').textContent = `$${Number(value).toLocaleString()}`;
+    }
+    function updateOdometer(value) {
+        document.getElementById('selectedOdometer').textContent = `$${Number(value).toLocaleString()}`;
+    }
+    function toggleAdvancedSearch() {
+    const container = document.getElementById("advanced-search-container");
+    container.classList.toggle("hidden");
+}
+</script>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".carousel-item");
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("opacity-100", "opacity-0");
+
+            if (i === index) {
+                slide.classList.add("opacity-100");
+                slide.classList.remove("opacity-0");
+            } else {
+                slide.classList.add("opacity-0");
+                slide.classList.remove("opacity-100");
+            }
+        });
+
+        updateIndicators(index);
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const newIndex = (currentSlide + 1) % slides.length;
+        showSlide(newIndex);
+    }
+
+    function prevSlide() {
+        const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(newIndex);
+    }
+
+    function goToSlide(index) {
+        showSlide(index);
+    }
+
+    function updateIndicators(index) {
+        document
+            .querySelectorAll('[aria-label^="Slide"]')
+            .forEach((indicator, i) => {
+                indicator.classList.toggle("bg-white", i === index);
+                indicator.classList.toggle("bg-gray-300", i !== index);
+            });
+    }
+    showSlide(0);
 </script>
 
 </html>

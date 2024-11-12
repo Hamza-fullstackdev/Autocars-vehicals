@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autocars Vehical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="py-2 shadow-md">
+        <div class="mx-4 sm:mx-16 flex flex-row justify-between items-center py-2">
+            <div>
+                <img src="./images/logo (2).png" width="100" alt="" />
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8">
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars
+                            for Sale</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell
+                            or Trade</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car
+                            Finance</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="flex items-center space-x-4 relative">
+                    <button id="searchIcon" class="hover:text-gray-400 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="https://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 4a7 7 0 015.2 11.8l4.3 4.3-1.4 1.4-4.3-4.3A7 7 0 1111 4z"></path>
+                        </svg>
+                    </button>
+                    <button id="toggleSidebar" class="md:hidden hover:text-gray-400 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="https://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="searchBar" class="hidden p-4 absolute bg-white w-full">
+        <input type="text" class="w-full p-2 bg-gray-200 rounded-md" placeholder="Search..." />
+    </div>
+    <div id="sidebar"
+        class="fixed top-0 right-0 w-64 h-full bg-white p-4 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg">
+        <button id="closeSidebar" class="hover:text-gray-400 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="https://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="mt-8 space-y-4 items-center">
+            <nav>
+                <ul class="flex flex-col gap-8">
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars
+                            for Sale</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell
+                            or Trade</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car
+                            Finance</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="mx-4 sm:mx-16 my-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-5">
+            <div class="col-span-2">
+                <div class="bg-blue-950 flex items-center p-3 gap-2">
+                    <div>
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <!DOCTYPE svg
+                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25"
+                            viewBox="0 0 156.741 156.741" xml:space="preserve">
+                            <g>
+                                <path d="M122.39,140.333H34.353c-1.498,0-2.7-1.213-2.7-2.699c0-1.487,1.202-2.7,2.7-2.7h88.053c1.487,0,2.7,1.213,2.7,2.7
+		C125.105,139.12,123.893,140.333,122.39,140.333z M156.557,51.729l-23.488,60.692h-12.772c-1.486,0-2.699,1.208-2.699,2.7
+		s1.213,2.7,2.699,2.7h10.689l-3.322,8.58c-0.396,1.033-1.402,1.719-2.516,1.719H31.603c-1.113,0-2.117-0.686-2.516-1.719
+		l-3.322-8.58h13.534c1.49,0,2.7-1.208,2.7-2.7s-1.21-2.7-2.7-2.7H23.676L0.186,51.729c-0.442-1.134-0.076-2.423,0.907-3.148
+		c0.979-0.718,2.333-0.707,3.267,0.05L47.328,82.41l28.566-64.539c0.865-1.949,4.071-1.954,4.936,0l28.233,63.795l43.316-33.075
+		c0.971-0.728,2.294-0.738,3.259-0.01C156.63,49.327,156.999,50.601,156.557,51.729z M74.399,115.132c0-1.482-1.21-2.7-2.7-2.7
+		h-16.2c-1.487,0-2.7,1.218-2.7,2.7c0,1.481,1.213,2.699,2.7,2.699h16.2C73.188,117.831,74.399,116.613,74.399,115.132z
+		 M76.569,38.008c-1.082-0.485-2.365-0.016-2.856,1.075L49.698,91.839L20.312,68.881c-0.939-0.735-2.294-0.567-3.035,0.372
+		c-0.741,0.938-0.562,2.294,0.366,3.035l31.559,24.651c0.377,0.301,0.847,0.453,1.321,0.453c0.174,0,0.34-0.021,0.514-0.068
+		c0.643-0.147,1.189-0.591,1.463-1.202L77.65,40.876C78.135,39.785,77.655,38.511,76.569,38.008z M106.796,115.132
+		c0-1.482-1.207-2.7-2.699-2.7h-16.2c-1.487,0-2.7,1.218-2.7,2.7c0,1.481,1.213,2.699,2.7,2.699h16.2
+		C105.589,117.831,106.796,116.613,106.796,115.132z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-white uppercase font-bold text-lg">Used Vehical</h3>
+                </div>
+                <div id="carousel-1" class="mt-3 carousel relative w-full">
+                    <div class="relative h-[300px] overflow-hidden">
+                        <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0"
+                            data-carousel-item="0">
+                            <img src="https://pictures.dealer.com/a/autonationusafortmyersamsi/0518/0e0c8769d853bd9dbc9420cba9d1c8e9x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Slide 1" />
+                        </div>
+                        <div class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0"
+                            data-carousel-item="1">
+                            <img src="https://pictures.dealer.com/a/autonationusakaty/1627/2d0c0228f6a3100fad4c40b0b38e1987x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Slide 2" />
+                        </div>
+                    </div>
+                    <button type="button"
+                        class="prev-button absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="https://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="next-button absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="https://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="my-5">
+                    <div class="border-b-4 border-blue-950 pb-2">
+                        <h2 class="font-bold text-2xl text-blue-950 uppercase">
+                            2010 Ford Falcon FG XR8 Ute Super Cab 6 Speed Manual Utility
+                        </h2>
+                        <h3 class="mt-3 text-3xl font-semibold text-pink-500">$39,990</h3>
+                        <div class="mt-5 mb-3 flex gap-3">
+                            <a href="#" class="bg-blue-950 text-white p-3 uppercase font-bold">$ Finance This Vehical</a>
+                            <a href="#" class="border-2 border-pink-500 p-2 text-blue-950 uppercase font-bold">Enquire now!</a>
+                        </div>
+                    </div>
+                    <div class="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-x-5 gap-y-5">
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <svg fill="#000000" width="25" height="25" viewBox="0 0 32 32" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.999 1.129c-8.812 0-15.98 7.169-15.98 15.981 0 5.536 2.803 10.6 7.497 13.544 0.467 0.296 1.084 0.152 1.378-0.316s0.152-1.085-0.316-1.378c-1.691-1.061-3.095-2.439-4.17-4.027l1.048-0.605c0.478-0.276 0.643-0.887 0.366-1.366-0.277-0.48-0.889-0.642-1.366-0.366l-1.050 0.606c-0.763-1.579-1.228-3.306-1.353-5.107h1.113c0.552 0 1-0.448 1-1s-0.447-1-1-1h-1.108c0.132-1.834 0.618-3.572 1.393-5.143l1.005 0.58c0.157 0.091 0.329 0.134 0.499 0.134 0.346 0 0.681-0.179 0.867-0.5 0.277-0.479 0.112-1.090-0.366-1.366l-0.995-0.574c1.003-1.463 2.277-2.728 3.75-3.719l0.563 0.975c0.185 0.322 0.521 0.5 0.867 0.5 0.17 0 0.342-0.043 0.499-0.134 0.479-0.277 0.643-0.887 0.366-1.366l-0.561-0.971c1.542-0.744 3.24-1.208 5.030-1.338v1.246c0 0.553 0.447 1 1 1s1-0.447 1-1v-1.25c1.831 0.127 3.567 0.606 5.137 1.373l-0.543 0.939c-0.276 0.479-0.113 1.090 0.366 1.366 0.157 0.091 0.329 0.134 0.499 0.134 0.346 0 0.681-0.178 0.867-0.5l0.54-0.936c1.459 0.993 2.721 2.255 3.715 3.713l-0.936 0.541c-0.479 0.277-0.642 0.887-0.366 1.366 0.186 0.322 0.521 0.5 0.867 0.5 0.17 0 0.342-0.043 0.499-0.134l0.942-0.543c0.768 1.571 1.248 3.307 1.377 5.139h-1.098c-0.552 0-1 0.448-1 1s0.448 1 1 1h1.098c-0.127 1.777-0.581 3.482-1.328 5.041l-0.99-0.572c-0.477-0.276-1.091-0.111-1.366 0.366-0.276 0.479-0.113 1.090 0.366 1.366l0.993 0.573c-1.097 1.633-2.545 3.044-4.292 4.119-0.471 0.29-0.616 0.907-0.327 1.376 0.189 0.306 0.517 0.476 0.852 0.476 0.178 0 0.36-0.048 0.523-0.148 4.764-2.934 7.608-8.024 7.608-13.614 0-8.811-7.169-15.98-15.98-15.98zM23.378 13.992c0.478-0.277 0.642-0.887 0.366-1.366s-0.888-0.642-1.366-0.366l-5.432 3.136c-0.29-0.164-0.62-0.265-0.977-0.265-1.102 0-1.995 0.893-1.995 1.994 0 1.102 0.893 1.995 1.995 1.995s1.995-0.893 1.995-1.995c0-0.002-0-0.005-0-0.007z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-blue-950 text-sm">102,999</span>
+                                <span class="font-semibold text-blue-950 text-sm">Km's</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <svg fill="#000000" height="25" width="25" version="1.1" id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 512 512" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M435.501,149.331l-72.832-72.832C354.661,68.491,343.817,64,332.501,64h-97.835V42.667C234.667,19.109,215.558,0,192,0
+                    h-42.667c-23.558,0-42.667,19.109-42.667,42.667v24.973C81.805,76.422,64,100.125,64,128v320c0,35.34,28.65,64,64,64h256
+                    c35.334,0,64-28.666,64-64V179.499C448,168.183,443.509,157.339,435.501,149.331z M384,469.333H128
+                    c-11.782,0-21.333-9.554-21.333-21.333V128c0-11.791,9.542-21.333,21.333-21.333c11.782,0,21.333-9.551,21.333-21.333V42.667H192
+                    v42.667c0,11.782,9.551,21.333,21.333,21.333h119.168l72.83,72.834L405.333,448C405.333,459.77,395.77,469.333,384,469.333z" />
+                                                <path d="M239.792,318.696c38.133,7.865,73.1-20.943,73.1-59.142c0-10.153-2.834-19.383-8.098-27.715
+                    c-1.122-1.781-2.025-3.202-4.038-6.356c-8.325-13.045-11.746-18.729-15.268-25.774l-13.949-27.919
+                    c-7.858-15.729-30.302-15.732-38.165-0.006l-11.2,22.4c-8.787,17.574-13.103,25.231-19.219,33.12
+                    c-6.366,8.25-10.049,17.471-10.799,28.104C190.025,285.067,210.662,312.67,239.792,318.696z M234.714,258.437
+                    c0.143-2.023,0.65-3.292,1.989-5.029c5.894-7.602,10.243-14.477,15.81-24.901c2.988,5.235,6.597,11.032,12.106,19.664
+                    l0.169,0.264c1.987,3.114,2.839,4.453,3.918,6.167c1.092,1.728,1.518,3.117,1.518,4.951c0,11.281-10.264,19.737-21.803,17.357
+                    C240.351,275.242,234.107,266.89,234.714,258.437z" />
+                                                <path d="M319.998,362.665h-128c-11.782,0-21.333,9.551-21.333,21.333c0,11.782,9.551,21.333,21.333,21.333h128
+                    c11.782,0,21.333-9.551,21.333-21.333C341.331,372.216,331.78,362.665,319.998,362.665z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-blue-950 text-sm">On</span>
+                                <span class="font-semibold text-blue-950 text-sm">Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <!DOCTYPE svg
+                                    PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                                <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25"
+                                    viewBox="0 0 357.83 357.83" xml:space="preserve">
+                                    <g>
+                                        <path d="M330.469,114.665h-3.771V63.784l-23.986-24.095l-2.455,18.996l8.609,8.716v47.265h-3.773v52h4.676v89.646
+            c0,10.477-8.523,19-19,19s-19-8.523-19-19v-90.851h-27.99v-8.267h14.164L284.768,0H27.361l26.826,157.195h14.164v149.072H39.707
+            v51.562h232.715v-51.562h-28.646V181.462h11.99v74.851c0,19.299,15.701,35,35,35s35-15.701,35-35v-89.647h4.703V114.665
+            L330.469,114.665z M224.188,117.195H87.939L74.766,40h162.596L224.188,117.195z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-blue-950 text-sm">$102</span>
+                                <span class="font-semibold text-blue-950 text-sm">Cost to fill</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <!DOCTYPE svg
+                                    PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                                <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25"
+                                    viewBox="0 0 480.543 480.543" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path d="M225.278,278.426c0-48.641-39.572-88.213-88.214-88.213c-48.641,0-88.212,39.572-88.212,88.213
+                c0,14.254,3.401,27.727,9.431,39.654l78.781,162.463l78.795-162.488C221.88,306.133,225.278,292.669,225.278,278.426z
+                 M137.064,327.243c-26.917,0-48.817-21.9-48.817-48.817s21.9-48.817,48.817-48.817c26.918,0,48.817,21.9,48.817,48.817
+                S163.982,327.243,137.064,327.243z" />
+                                            <path
+                                                d="M387.021,0c-24.63,0-44.669,20.038-44.669,44.668c0,7.218,1.723,14.04,4.776,20.081l39.893,82.267l39.899-82.28
+                c3.049-6.037,4.77-12.855,4.77-20.067C431.69,20.038,411.65,0,387.021,0z M387.021,69.388c-13.631,0-24.72-11.089-24.72-24.72
+                c0-13.63,11.089-24.72,24.72-24.72c13.629,0,24.719,11.09,24.719,24.72C411.74,58.299,400.65,69.388,387.021,69.388z" />
+                                            <path d="M348.116,289.787c-1.812-8.523-4.166-16.875-7.131-25.075c-3.974-10.987-8.74-21.724-12.391-32.836
+                c-6.823-20.771,4.948-38.105,7.16-41.256c3.876-5.517,8.408-10.58,13.19-15.322c9.207-9.128,19.361-17.288,29.984-24.803
+                c-1.316-2.039-2.591-4.1-3.805-6.199c-15.279,5.99-93.854,33.452-91.938,94.121c0.384,12.162,5.083,23.737,7.979,35.526
+                c1.395,5.681,2.605,11.412,3.345,17.218c0.319,2.614,0.515,5.243,0.729,7.87c0.006-0.02,0.004-0.034-0.008-0.045
+                c0.007,0.076,0.202,8.326-0.164,11.9c-1.147,11.189-2.799,22.494-7.516,32.758c-4.387,9.543-11.006,17.842-19.193,24.402
+                c-18.716,14.994-43.514,20.988-66.913,23.398c-1.114,0.117-2.228,0.217-3.342,0.314l-41.779,86.152
+                c20.614-1.281,41.175-4.102,61.235-9.039c23.607-5.811,46.613-14.588,67.227-27.598c20.596-12.996,38.308-30.578,50.099-51.984
+                c12.335-22.391,17.277-48.038,16.225-73.452C350.752,307.156,349.928,298.307,348.116,289.787z" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-blue-950 text-sm">465km</span>
+                                <span class="font-semibold text-blue-950 text-sm">Average Per Tank</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <!DOCTYPE svg
+                                    PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+                                <svg width="25" height="25" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                    <g id="SVGRepo_iconCarrier">
+                                        <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                                        <path d="M40 12V24H8" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M24 12V24V36" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M8 12V24V36" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M44 8C44 10.2091 42.2091 12 40 12C37.7909 12 36 10.2091 36 8C36 5.79086 37.7909 4 40 4C42.2091 4 44 5.79086 44 8Z"
+                                            fill="#ffffff" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M28 8C28 10.2091 26.2091 12 24 12C21.7909 12 20 10.2091 20 8C20 5.79086 21.7909 4 24 4C26.2091 4 28 5.79086 28 8Z"
+                                            fill="#ffffff" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12 8C12 10.2091 10.2091 12 8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8Z"
+                                            fill="#ffffff" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M28 40C28 42.2091 26.2091 44 24 44C21.7909 44 20 42.2091 20 40C20 37.7909 21.7909 36 24 36C26.2091 36 28 37.7909 28 40Z"
+                                            fill="#ffffff" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12 40C12 42.2091 10.2091 44 8 44C5.79086 44 4 42.2091 4 40C4 37.7909 5.79086 36 8 36C10.2091 36 12 37.7909 12 40Z"
+                                            fill="#ffffff" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="40" cy="40" r="4" fill="#ffffff" stroke="#000000" stroke-width="4"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-blue-950 text-sm">6 Manual</span>
+                                <span class="font-semibold text-blue-950 text-sm">Gears</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?>
+
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg fill="#000000" width="25" height="25" viewBox="0 -14.14 122.88 122.88"
+                                    version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    style="enable-background: new 0 0 122.88 94.59" xml:space="preserve">
+                                    <g>
+                                        <path class="st0"
+                                            d="M43.58,92.2L31.9,80.53h-8.04c-2.81,0-5.11-2.3-5.11-5.11v-8.7h-4.87V76.9c0,2.17-1.78,3.95-3.95,3.95H3.95 C1.78,80.85,0,79.07,0,76.9V42.4c0-2.17,1.78-3.95,3.95-3.95h5.98c2.17,0,3.95,1.78,3.95,3.95v10.18h4.87v-9.36 c0-2.81,2.3-5.11,5.11-5.11h8.54l12.07-12.83c1.4-1.22,3.26-1.65,5.43-1.56h49.73c1.72,0.19,3.03,0.85,3.83,2.09 c0.8,1.22,0.67,1.91,0.67,3.28v23.49H109V42.4c0-2.17,1.78-3.95,3.95-3.95h5.98c2.17,0,3.95,1.78,3.95,3.95v34.5 c0,2.17-1.78,3.95-3.95,3.95h-5.98c-2.17,0-3.95-1.78-3.95-3.95V66.72h-4.87v0.92c0,2.73,0.08,4.38-1.66,6.64 c-0.33,0.43-0.7,0.84-1.11,1.22L83.53,92.96c-0.89,0.99-2.24,1.53-4.02,1.63h-30.4C46.84,94.49,44.99,93.71,43.58,92.2L43.58,92.2z M63.71,61.78l-12.64-1.19l10.48-22.96h14.33l-8.13,13.17l14.62,1.62L55.53,84.64L63.71,61.78L63.71,61.78z M51.98,0h34.5 c2.17,0,3.95,1.78,3.95,3.95v5.98c0,2.17-1.78,3.95-3.95,3.95H76.3v5.03H62.16v-5.03H51.98c-2.17,0-3.95-1.78-3.95-3.95V3.95 C48.03,1.78,49.81,0,51.98,0L51.98,0z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-blue-950 text-sm">5.2L</span>
+                                <span class="font-semibold text-blue-950 text-sm">8 Cylinders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div class="bg-blue-950 flex items-center p-3 gap-2">
+                        <div>
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.75 6L7.5 5.25H16.5L17.25 6V19.3162L12 16.2051L6.75 19.3162V6ZM8.25 6.75V16.6838L12 14.4615L15.75 16.6838V6.75H8.25Z"
+                                    fill="#ffffff" />
+                            </svg>
+                        </div>
+                        <h3 class="text-white uppercase font-bold text-lg">Vehical Features:</h3>
+                    </div>
+                    <table class="min-w-full bg-white mt-2">
+                        <tbody>
+                            <tr class="grid grid-cols-1 sm:grid-cols-2">
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Central Locking - Remote/Keyless</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Cruise Control</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    17" Alloy Wheels</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Power Steering - Electric Assist</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Air Cond. - Climate Control</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    CD Player</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    ABS (Antilock Brakes)</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Airbag - Driver</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Airbag - Knee Driver</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Airbag - Passenger</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Airbags - Head for 1st Row Seats (Front)</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Airbags - Head for 2nd Row Seats</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Audio - Aux Input Socket (MP3/CD/Cassette)</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Central Locking - Remote/Keyless</td>
+                                <td
+                                    class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950 hover:bg-gray-100">
+                                    Electric Seat - Drivers </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-5">
+                    <div class="bg-blue-950 flex items-center p-3 gap-2">
+                        <div>
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="25" height="25" viewBox="0 0 24 24" fill="#ffffff"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="text-white uppercase font-bold text-lg">Where to find us:</h3>
+                    </div>
+                    <div class="mt-3 pl-3">
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                                        stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
+                                        stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-pink-500 font-semibold"> 861 Stuart Highway Pinelands NT 0829
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.05 6C15.0268 6.19057 15.9244 6.66826 16.6281 7.37194C17.3318 8.07561 17.8095 8.97326 18 9.95M14.05 2C16.0793 2.22544 17.9716 3.13417 19.4163 4.57701C20.8609 6.01984 21.7721 7.91101 22 9.94M18.5 21C9.93959 21 3 14.0604 3 5.5C3 5.11378 3.01413 4.73086 3.04189 4.35173C3.07375 3.91662 3.08968 3.69907 3.2037 3.50103C3.29814 3.33701 3.4655 3.18146 3.63598 3.09925C3.84181 3 4.08188 3 4.56201 3H7.37932C7.78308 3 7.98496 3 8.15802 3.06645C8.31089 3.12515 8.44701 3.22049 8.55442 3.3441C8.67601 3.48403 8.745 3.67376 8.88299 4.05321L10.0491 7.26005C10.2096 7.70153 10.2899 7.92227 10.2763 8.1317C10.2643 8.31637 10.2012 8.49408 10.0942 8.64506C9.97286 8.81628 9.77145 8.93713 9.36863 9.17882L8 10C9.2019 12.6489 11.3501 14.7999 14 16L14.8212 14.6314C15.0629 14.2285 15.1837 14.0271 15.3549 13.9058C15.5059 13.7988 15.6836 13.7357 15.8683 13.7237C16.0777 13.7101 16.2985 13.7904 16.74 13.9509L19.9468 15.117C20.3262 15.255 20.516 15.324 20.6559 15.4456C20.7795 15.553 20.8749 15.6891 20.9335 15.842C21 16.015 21 16.2169 21 16.6207V19.438C21 19.9181 21 20.1582 20.9007 20.364C20.8185 20.5345 20.663 20.7019 20.499 20.7963C20.3009 20.9103 20.0834 20.9262 19.6483 20.9581C19.2691 20.9859 18.8862 21 18.5 21Z"
+                                        stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-pink-500 font-semibold">(08) 8932 9299</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?>
+
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Warning / Info">
+                                        <path id="Vector"
+                                            d="M12 11V16M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12.0498 8V8.1L11.9502 8.1002V8H12.0498Z"
+                                            stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-pink-500 font-semibold"> Dealer Licence No. LMVD1030</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?>
+
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Warning / Info">
+                                        <path id="Vector"
+                                            d="M12 11V16M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12.0498 8V8.1L11.9502 8.1002V8H12.0498Z"
+                                            stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-pink-500 font-semibold"> ABN: 61639668045</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.9997072499596!2d73.1154986739374!3d30.663348788985527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922b76da7fde6c7%3A0x53937ae1a82170a!2sKhan%20bakers!5e1!3m2!1sen!2s!4v1731403934717!5m2!1sen!2s" width="600" height="450" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div>
+                <div class="sticky top-2">
+                    <div class="bg-blue-950 flex items-center p-3 gap-2">
+                        <div>
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="20" height="20" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M320 89.6h640v76.8H320V89.6z m0 768h640v76.8H320v-76.8z m-256-768h128v76.8H64V89.6z m256 384h640v76.8H320V473.6z m-256 0h128v76.8H64V473.6z m0 384h128v76.8H64v-76.8z"
+                                    fill="#ffffff" />
+                            </svg>
+                        </div>
+                        <h3 class="text-white uppercase font-bold text-lg">Vehical Details:</h3>
+                    </div>
+                    <table class="min-w-full bg-white mt-3">
+                        <tbody>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Vehicle</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">2010 Ford
+                                    Falcon
+                                    FG XR8 Ute Super Cab 6</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Doors</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">2</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Seats</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">3</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Cylinders</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">8</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Fuel Type</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">Petrol -
+                                    Unleaded
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Capacity</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">5.4</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Gears</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">6 Speed</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Gearbox</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">Sports
+                                    Automatic
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Transmission</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">Automatic
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Odometer</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">142,542 kms
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Drive Type</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">4WD</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Rego</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">CE89ID</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">StockNo</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">1639</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">VIN</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">
+                                    6FPAAAJGATFMG93158</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="py-2 px-4 border-b border-gray-300 font-bold text-blue-950">Fuel Consumption
+                                    (Urban)</td>
+                                <td class="py-2 px-4 border-b border-gray-300 font-semibold text-pink-500">11.6L/100km
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    document.querySelectorAll(".carousel").forEach((carousel) => {
+        let currentSlide = 0;
+        const slides = carousel.querySelectorAll(".carousel-item");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("opacity-100", i === index);
+                slide.classList.toggle("opacity-0", i !== index);
+            });
+            currentSlide = index;
+        }
+
+        carousel.querySelector(".next-button").addEventListener("click", () => {
+            const newIndex = (currentSlide + 1) % slides.length;
+            showSlide(newIndex);
+        });
+
+        carousel.querySelector(".prev-button").addEventListener("click", () => {
+            const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(newIndex);
+        });
+
+        showSlide(0);
+    });
+</script>
+<script>
+    document
+        .getElementById("searchIcon")
+        .addEventListener("click", function () {
+            document.getElementById("searchBar").classList.toggle("hidden");
+        });
+
+    document
+        .getElementById("toggleSidebar")
+        .addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("translate-x-full");
+        });
+
+    document
+        .getElementById("closeSidebar")
+        .addEventListener("click", function () {
+            document.getElementById("sidebar").classList.add("translate-x-full");
+        });
+</script>
+
+</html>

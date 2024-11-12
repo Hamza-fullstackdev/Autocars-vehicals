@@ -61,10 +61,10 @@
             </div>
         </div>
     </header>
-    <div id="searchBar" class="hidden p-4 absolute bg-white w-full">
+    <div id="searchBar" style="z-index: 99;" class="hidden p-4 absolute bg-white w-full">
         <input type="text" class="w-full p-2 bg-gray-200 rounded-md" placeholder="Search...">
     </div>
-    <div id="sidebar"
+    <div id="sidebar" style="z-index: 99;"
         class="fixed top-0 right-0 w-64 h-full bg-white p-4 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg">
         <button id="closeSidebar" class="hover:text-gray-400 focus:outline-none">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -178,8 +178,8 @@
         </button>
     </div>
     <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
-        <div class="w-full w-[60%] bg-white rounded-md p-8">
-            <h3 class="text-3xl text-blue-950 font-bold uppercase">Search Our Inventory</h3>
+        <div class="w-full w-[60%] bg-white rounded-md sm:p-8">
+            <h3 class="text-2xl sm:text-3xl text-blue-950 font-bold uppercase">Search Our Inventory</h3>
             <div class="flex justify-center mt-5">
                 <div class="w-full bg-gray-200 p-4 rounded">
                     <form>
@@ -313,8 +313,8 @@
             </div>
         </div>
     </section>
-    <section class="flex items-center justify-center bg-blue-950">
-        <div class="w-full md:w-[80%] px-4 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <section class="mt-8 flex items-center justify-center bg-blue-950">
+        <div class="w-full md:w-[80%] px-4 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8">
             <div class="border-r border-white">
                 <div class="flex items-center gap-5">
                     <div>
@@ -362,9 +362,9 @@
         </div>
     </section>
     <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
-            <div>
-                <h3 class="text-3xl text-blue-950 font-bold uppercase">Our Promise: Your Happiness</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-x-5 gap-y-8">
+            <div class="order-2 sm:order-none">
+                <h3 class="text-2xl sm:text-3xl text-blue-950 font-bold uppercase">Our Promise: Your Happiness</h3>
                 <div class="mt-5">
                     <p>Say yes to no worries at AutoNation USA. We bring you a hassle-free used car dealer experience
                         with reassuring benefits that will leave you confident and happy, including our one low upfront
@@ -372,17 +372,17 @@
                         that is quick and easy without stress. Can't you feel the love already?</p>
                 </div>
                 <div class="mt-8">
-                    <a href="#" class="bg-pink-500 text-white px-8 py-4 rounded-full">Learn More</a>
+                    <a href="#" class="bg-pink-500 text-white text-sm font-semibold px-8 py-4 rounded-full uppercase">Learn More</a>
                 </div>
             </div>
-            <div>
+            <div class="order-1 sm:order-none">
                 <img src="./images/about.webp" alt="About" class="w-full h-auto rounded-md">
             </div>
         </div>
     </section>
     <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
         <div>
-            <h2 class="text-3xl font-bold text-blue-950 uppercase">Shop by Price</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-950 uppercase">Shop by Price</h2>
         </div>
         <div class="flex items-center justify-center">
             <div class="w-full">
@@ -433,13 +433,13 @@
     </section>
     <section class="mx-4 sm:mx-16 mt-10 sm:my-20">
         <div>
-            <h2 class="text-3xl font-bold text-blue-950 uppercase">Shop by Brand</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-950 uppercase">Shop by Brand</h2>
         </div>
         <div class="flex items-center justify-center">
             <div class="w-full">
                 <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
                     <div>
-                        <a href="#">
+                        <a href="#" class="text-center">
                             <img src="./images/logo-ford-lrg.avif" alt="ford">
                         </a>
                     </div>
@@ -469,9 +469,9 @@
     </section>
     <footer class="py-10 bg-blue-950 mt-5">
         <div class="mx-4 sm:mx-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-5">
-                <div>
-                    <img src="./images/logo-white.png" width="150" alt="logo-img">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-8">
+                <div class="flex items-center justify-center sm:block">
+                    <img src="./images/logo-white.png" width="220" alt="logo-img">
                 </div>
                 <div>
                     <h3 class="font-semibold text-xl text-white mb-3">Quick Links</h3>

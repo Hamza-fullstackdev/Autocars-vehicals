@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocars Vehical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="py-2 shadow-md">
+        <div class="mx-4 sm:mx-16 flex flex-row justify-between items-center py-2">
+            <div>
+                <img src="./images/logo (2).png" width="100" alt="">
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars
+                            for Sale</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell
+                            or Trade</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car
+                            Finance</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About
+                            Us</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="flex items-center space-x-4 relative">
+                    <button id="searchIcon" class="hover:text-gray-400 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="https://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 4a7 7 0 015.2 11.8l4.3 4.3-1.4 1.4-4.3-4.3A7 7 0 1111 4z"></path>
+                        </svg>
+                    </button>
+                    <button id="toggleSidebar" class="md:hidden hover:text-gray-400 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="https://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="searchBar" style="z-index: 99;" class="hidden p-4 absolute bg-white w-full">
+        <input type="text" class="w-full p-2 bg-gray-200 rounded-md" placeholder="Search...">
+    </div>
+    <div id="sidebar" style="z-index: 99;"
+        class="fixed top-0 right-0 w-64 h-full bg-white p-4 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg">
+        <button id="closeSidebar" class="hover:text-gray-400 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="https://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="mt-8 space-y-4 items-center">
+            <nav>
+                <ul class="flex flex-col gap-8">
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Cars
+                            for Sale</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Sell
+                            or Trade</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Car
+                            Finance</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">About
+                            Us</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-semibold relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="scrollTopBtn" class="bg-pink-500 w-fit rounded-full cursor-pointer fixed bottom-10 right-10 group hidden"
+        onclick="scrollToTop()">
+        <div class="p-5 flex gap-3 items-center">
+            <svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-up text-white text-2xl" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+            </svg>
+            <span
+                class="text-white font-bold overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap">Scroll
+                to top</span>
+        </div>
+    </div>
+    <section
+        style="background: url('./images/sydney.jpg'); background-size: cover; background-color: rgba(0, 0, 0, 0.537); background-blend-mode: multiply; height: 95vh;">
+        <div class="flex items-center h-full">
+            <div class="p-3 sm:px-16 w-full sm:w-[70%]">
+                <p class="text-2xl font-semibold text-white">Sell us your vehicle today at AutoNation USA!
+                    Click the button below to get an easy online appraisal. Then, we'll make you a competitive offer and
+                    pay you fast. It's that easy!</p>
+                <div class="mt-8">
+                    <a href="#" class="bg-pink-600 py-3 px-5 text-white font-semibold rounded-full">Start Your
+                        Appraisal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mx-4 sm:mx-16 my-10 md:my-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            <div>
+                <div class="flex items-center justify-center">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg fill="#172554" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 252 256"
+                        enable-background="new 0 0 252 256" xml:space="preserve">
+                        <path d="M187.6,145.344l-18.65-44.73c-2.4-5.71-7.55-9.98-13.85-11c0.98-7.59,3.64-18.33,6.2-23.76l-4.67-4.57
+                            c-3.48,6.14-6.79,19.29-7.83,28.1H55.98c-7.6,0-13.99,4.66-16.76,11.23l-18.82,44.73c-10.54,2.94-18.31,12.44-18.31,24.02v52.51
+                            h16.23v16.06c0,8.98,7.26,16.07,16.07,16.07s16.06-7.09,16.06-16.07v-16.06h106.93v16.06c0,8.98,7.08,16.07,16.06,16.07
+                            c8.81,0,16.06-7.09,16.06-16.07v-16.06h16.41v-52.51C205.91,157.784,198.14,148.284,187.6,145.344z M52.7,105.794
+                            c0.69-1.9,2.59-3.28,4.66-3.28h93.28c2.24,0,4.14,1.38,4.84,3.28l16.06,38.69H36.63L52.7,105.794z M35.42,193.024
+                            c-8.98,0-16.23-7.26-16.23-16.24s7.25-16.23,16.23-16.23c8.99,0,16.24,7.25,16.24,16.23S44.41,193.024,35.42,193.024z
+                            M171.54,193.024c-8.98,0-16.24-7.26-16.24-16.24s7.26-16.23,16.24-16.23c8.98,0,16.24,7.25,16.24,16.23
+                            S180.52,193.024,171.54,193.024z M239.3,2.004l-79.75,14.37l-14.18,33.16l11.17,11.59c3.04-6.12,7.11-11.83,11.83-15.46
+                            c-0.03-0.12-0.05-0.24-0.07-0.36c-0.97-5.33,2.57-10.44,7.9-11.4c5.34-0.97,10.44,2.57,11.41,7.9c0.96,5.34-2.58,10.44-7.91,11.41
+                            c-2.97,0.54-5.86-0.32-8.02-2.11c-3.18,2.63-6.34,6.81-9.07,12.1c-0.44,0.86-0.85,1.71-1.24,2.55l9.44,9.8L250,61.094L239.3,2.004z
+                            M217.58,52.364l0.85,5.54l-5.29,0.81l-0.78-5.09c-3.73,0.32-7.36-0.07-9.59-0.92l0.66-6.46c2.51,0.8,5.89,1.47,9.38,0.94
+                            c3.01-0.46,4.92-1.94,4.57-4.23c-0.12-2.12-2.15-3-6.29-3.79c-6.06-0.97-10.41-3.13-11.23-8.47c-0.74-4.85,2.14-9.07,7.74-11.12
+                            l-0.78-5.05l5.3-0.81l0.74,4.85c3.73-0.32,6.16,0,8.14,0.64l-0.68,6.26c-1.51-0.46-4.22-1.24-8.14-0.63
+                            c-3.45,0.52-4.36,2.3-4.15,3.71c0.28,1.84,2.3,2.73,7.16,3.62c6.81,1.34,9.84,3.91,10.58,8.77
+                            C226.52,45.794,223.71,50.484,217.58,52.364z" />
+                    </svg>
+                </div>
+                <div class="mt-5">
+                    <h3 class="text-blue-950 text-2xl font-bold text-center">Selling your car is fast & easy.</h3>
+                    <p class="text-lg text-center mt-2">We’ll purchase your car with no
+                        strings
+                        attached and pay you the same day!</p>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center justify-center">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg fill="#172554" width="100" height="100" viewBox="0 0 1920 1920"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M960 15 693.227 257.027 333.44 243.053 284.693 599.96 0 820.547l192 304.64-76.267 352 342.934 109.973 167.893 318.613L960 1769.56l333.44 136.213 167.893-318.613 342.934-109.973-76.267-352 192-304.64-284.693-220.587-48.747-356.907-359.893 13.974L960 15Zm352.747 616.427 147.84 153.813-600 577.28-402.774-402.773L608.64 808.92l254.933 254.827 449.174-432.32Z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="mt-5">
+                    <h3 class="text-blue-950 text-2xl font-bold text-center">We’ll give you a certified offer.</h3>
+                    <p class="text-lg text-center mt-2">Forget the estimate! AutoNation USA
+                        will give you a certified offer that’s good for cash and guaranteed for 7 days or 500 miles.</p>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center justify-center">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="#172554" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 11V15M18 9V13M17 4C19.4487 4 20.7731 4.37476 21.4321 4.66544C21.5199 4.70415 21.5638 4.72351 21.6904 4.84437C21.7663 4.91682 21.9049 5.12939 21.9405 5.22809C22 5.39274 22 5.48274 22 5.66274V16.4111C22 17.3199 22 17.7743 21.8637 18.0079C21.7251 18.2454 21.5914 18.3559 21.3319 18.4472C21.0769 18.5369 20.562 18.438 19.5322 18.2401C18.8114 18.1017 17.9565 18 17 18C14 18 11 20 7 20C4.55129 20 3.22687 19.6252 2.56788 19.3346C2.48012 19.2958 2.43624 19.2765 2.3096 19.1556C2.23369 19.0832 2.09512 18.8706 2.05947 18.7719C2 18.6073 2 18.5173 2 18.3373L2 7.58885C2 6.68009 2 6.2257 2.13628 5.99214C2.2749 5.75456 2.40859 5.64412 2.66806 5.55281C2.92314 5.46305 3.43803 5.56198 4.46783 5.75985C5.18862 5.89834 6.04348 6 7 6C10 6 13 4 17 4ZM14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5C13.3807 9.5 14.5 10.6193 14.5 12Z"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="mt-5">
+                    <h3 class="text-blue-950 text-2xl font-bold text-center">Get paid the same day. No hassles.</h3>
+                    <p class="text-lg text-center mt-2">Bring your certified offer and
+                        vehicle to an AutoNation USA Store near you, and we’ll pay you the same day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mx-4 sm:mx-16 my-10 md:my-20">
+        <h2 class="text-3xl font-bold mb-4">Here's How Its Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mt-10">
+            <div>
+                <div class="flex items-center justify-center">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <svg fill="#172554" height="100" width="100" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 502.643 502.643" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M251.256,237.591c37.166,0,67.042-30.048,67.042-66.977c0.043-37.037-29.876-66.999-67.042-66.999
+			c-36.908,0-66.869,29.962-66.869,66.999C184.387,207.587,214.349,237.591,251.256,237.591z" />
+                                <path d="M305.032,248.506H197.653c-19.198,0-34.923,17.602-34.923,39.194v107.854c0,1.186,0.604,2.243,0.669,3.473h175.823
+			c0.129-1.229,0.626-2.286,0.626-3.473V287.7C339.912,266.108,324.187,248.506,305.032,248.506z" />
+                                <path d="M431.588,269.559c29.832,0,53.754-24.008,53.754-53.668s-23.922-53.711-53.754-53.711
+			c-29.617,0-53.582,24.051-53.582,53.711C377.942,245.53,401.972,269.559,431.588,269.559z" />
+                                <path d="M474.708,278.317h-86.046c-15.445,0-28.064,14.107-28.064,31.472v86.413c0,0.928,0.453,1.812,0.518,2.826h141.03
+			c0.065-1.014,0.496-1.898,0.496-2.826v-86.413C502.707,292.424,490.11,278.317,474.708,278.317z" />
+                                <path d="M71.011,269.559c29.789,0,53.733-24.008,53.733-53.668S100.8,162.18,71.011,162.18c-29.638,0-53.603,24.051-53.603,53.711
+			S41.373,269.559,71.011,269.559L71.011,269.559z" />
+                                <path d="M114.109,278.317H27.977C12.576,278.317,0,292.424,0,309.789v86.413c0,0.928,0.453,1.812,0.539,2.826h141.03
+			c0.065-1.014,0.475-1.898,0.475-2.826v-86.413C142.087,292.424,129.489,278.317,114.109,278.317z" />
+                            </g>
+                    </svg>
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-blue-950 font-bold text-2xl text-center">Tell us about your car.</h3>
+                    <p class="text-lg text-center mt-2">Visit us online and tell us a little about your car. All we need
+                        is your Vehicle Identification Number (VIN) or license plate number and the state where it's
+                        registered. Then, provide the mileage, color, and condition. That's it!</p>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center justify-center">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg fill="#172554" width="100" height="100" viewBox="0 0 1024 1024"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985zm0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960v799.984zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32zm0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32zm-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32zm0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32z" />
+                    </svg>
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-blue-950 font-bold text-2xl text-center">Get a certified offer fast</h3>
+                    <p class="text-lg text-center mt-2">In as little as 30 minutes, we'll give you a certified offer
+                        that is good for cash & guaranteed for 7 days or 500 miles. The same fair market value offer
+                        whether you're selling us your vehicle or trading it in. </p>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center justify-center">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" width="100"
+                        height="100">
+                        <style type="text/css">
+                            .st0 {
+                                fill: none;
+                                stroke: #172554;
+                                stroke-width: 2;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st1 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 2;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 10;
+                                stroke-dasharray: 3;
+                            }
+
+                            .st2 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 2;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st3 {
+                                fill: none;
+                            }
+                        </style>
+                        <path class="st0" d="M6.5,9.9L7,9.5c0.8-0.6,1.4-1.6,1.5-2.6l0.1-0.4c0.4-2.6,3.2-4.2,5.8-3.2l0,0c1.1,0.4,2.2,0.4,3.3,0l0,0
+	c2.5-1.1,5.4,0.5,5.8,3.2l0.1,0.4c0.1,1,0.7,2,1.5,2.6l0.5,0.4c2.1,1.6,2.1,4.6,0,6.2L25,16.5c-0.8,0.6-1.4,1.6-1.5,2.6l-0.1,0.4
+	c-0.4,2.6-3.2,4.2-5.8,3.2l0,0c-1.1-0.4-2.2-0.4-3.3,0l0,0c-2.5,1.1-5.4-0.5-5.8-3.2l-0.1-0.4c-0.1-1-0.7-2-1.5-2.6l-0.5-0.4
+	C4.5,14.5,4.5,11.5,6.5,9.9z" />
+                        <polyline class="st0" points="22,22 22,29 16,26 10,29 10,22 " />
+                        <line class="st0" x1="16" y1="9" x2="16" y2="10" />
+                        <line class="st0" x1="16" y1="16" x2="16" y2="17" />
+                        <path class="st0" d="M17,10h-1.5c-0.8,0-1.5,0.7-1.5,1.5v0c0,0.8,0.7,1.5,1.5,1.5h1c0.8,0,1.5,0.7,1.5,1.5v0c0,0.8-0.7,1.5-1.5,1.5
+	H15" />
+                        <rect x="-72" y="-360" class="st3" width="100" height="100" />
+                    </svg>
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-blue-950 font-bold text-2xl text-center">Bring in your offer & get paid.</h3>
+                    <p class="text-lg text-center mt-2">Secure your offer confidently after we assess and confirm your
+                        vehicle's condition. Take your time, with 7 days or 500 miles to decide. When you're ready to
+                        accept, bring your offer and vehicle to our dealership, and we'll pay you the same day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mx-4 sm:mx-16 my-10 md:my-20">
+        <h2 class="text-3xl font-bold mb-5">Frequently Asked Questions</h2>
+        <div id="faqContainer" class="space-y-4 w-full md:w-[600px]">
+            <div class="faq-item border-b-2 pb-2">
+                <button
+                    class="faq-question flex items-center justify-between w-full text-left text-lg font-medium text-blue-950 focus:outline-none">
+                    <span>What is your return policy?</span>
+                    <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer mt-2 hidden">
+                    <p>You can return any item within 30 days of purchase. Make sure the product is in its original
+                        condition.</p>
+                </div>
+            </div>
+            <div class="faq-item border-b-2 pb-2">
+                <button
+                    class="faq-question flex items-center justify-between w-full text-left text-lg font-medium text-blue-950 focus:outline-none">
+                    <span>How long does shipping take?</span>
+                    <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-answer mt-2 hidden">
+                    <p>Shipping typically takes 5-7 business days, depending on your location and chosen shipping
+                        method.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-10 bg-blue-950 mt-5">
+        <div class="mx-4 sm:mx-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-8">
+                <div class="flex items-center justify-center sm:block">
+                    <img src="./images/logo-white.png" width="220" alt="logo-img">
+                </div>
+                <div>
+                    <h3 class="font-semibold text-xl text-white mb-3">Quick Links</h3>
+                    <ul class="flex flex-col gap-y-2">
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">FAQs</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-pink-700 after:transition-all after:duration-300 hover:after:w-full">Terms
+                                & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex flex-col gap-y-1">
+                        <h3 class="font-semibold text-xl text-white mb-3">Sales Department</h3>
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="https://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                                        stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
+                                        stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-semibold"> 861 Stuart Highway Pinelands NT 0829
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="https://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.05 6C15.0268 6.19057 15.9244 6.66826 16.6281 7.37194C17.3318 8.07561 17.8095 8.97326 18 9.95M14.05 2C16.0793 2.22544 17.9716 3.13417 19.4163 4.57701C20.8609 6.01984 21.7721 7.91101 22 9.94M18.5 21C9.93959 21 3 14.0604 3 5.5C3 5.11378 3.01413 4.73086 3.04189 4.35173C3.07375 3.91662 3.08968 3.69907 3.2037 3.50103C3.29814 3.33701 3.4655 3.18146 3.63598 3.09925C3.84181 3 4.08188 3 4.56201 3H7.37932C7.78308 3 7.98496 3 8.15802 3.06645C8.31089 3.12515 8.44701 3.22049 8.55442 3.3441C8.67601 3.48403 8.745 3.67376 8.88299 4.05321L10.0491 7.26005C10.2096 7.70153 10.2899 7.92227 10.2763 8.1317C10.2643 8.31637 10.2012 8.49408 10.0942 8.64506C9.97286 8.81628 9.77145 8.93713 9.36863 9.17882L8 10C9.2019 12.6489 11.3501 14.7999 14 16L14.8212 14.6314C15.0629 14.2285 15.1837 14.0271 15.3549 13.9058C15.5059 13.7988 15.6836 13.7357 15.8683 13.7237C16.0777 13.7101 16.2985 13.7904 16.74 13.9509L19.9468 15.117C20.3262 15.255 20.516 15.324 20.6559 15.4456C20.7795 15.553 20.8749 15.6891 20.9335 15.842C21 16.015 21 16.2169 21 16.6207V19.438C21 19.9181 21 20.1582 20.9007 20.364C20.8185 20.5345 20.663 20.7019 20.499 20.7963C20.3009 20.9103 20.0834 20.9262 19.6483 20.9581C19.2691 20.9859 18.8862 21 18.5 21Z"
+                                        stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-semibold">(08) 8932 9299</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="https://www.w3.org/2000/svg">
+                                    <g id="Warning / Info">
+                                        <path id="Vector"
+                                            d="M12 11V16M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12.0498 8V8.1L11.9502 8.1002V8H12.0498Z"
+                                            stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-semibold"> Dealer Licence No. LMVD1030</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    xmlns="https://www.w3.org/2000/svg">
+                                    <g id="Warning / Info">
+                                        <path id="Vector"
+                                            d="M12 11V16M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12.0498 8V8.1L11.9502 8.1002V8H12.0498Z"
+                                            stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-semibold"> ABN: 61639668045</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3 class="font-semibold text-xl text-white mb-3">Trading hour</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="text-sm text-white font-semibold">Monday
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-bold">8:00 am - 5:00 pm
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="text-sm text-white font-semibold">Tuesday
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-bold">8:00 am - 5:00 pm
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="text-sm text-white font-semibold">Wednesday
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-bold">8:00 am - 5:00 pm
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="text-sm text-white font-semibold">Thursday
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-bold">8:00 am - 5:00 pm
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="text-sm text-white font-semibold">Friday
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-bold">8:00 am - 1:00 pm
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <span class="text-sm text-white font-semibold">Saturday
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-sm text-white font-bold">Closed
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    document.getElementById('searchIcon').addEventListener('click', function () {
+        document.getElementById('searchBar').classList.toggle('hidden');
+    });
+
+    document.getElementById('toggleSidebar').addEventListener('click', function () {
+        document.getElementById('sidebar').classList.toggle('translate-x-full');
+    });
+
+    document.getElementById('closeSidebar').addEventListener('click', function () {
+        document.getElementById('sidebar').classList.add('translate-x-full');
+    });
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            const questionButton = item.querySelector(".faq-question");
+            const answer = item.querySelector(".faq-answer");
+            const icon = item.querySelector(".faq-icon");
+
+            questionButton.addEventListener("click", () => {
+                // Toggle the visibility of the answer
+                answer.classList.toggle("hidden");
+
+                // Rotate the icon
+                icon.classList.toggle("rotate-180");
+            });
+        });
+    });
+</script>
+
+</html>
